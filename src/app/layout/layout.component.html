@@ -1,1 +1,29 @@
-<p><i class="fa-solid fa-user fa-fw"></i> layout works!</p>
+<form [formGroup]="idForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <label class="col-12 col-sm-2">ID</label>
+    <div class="col-sm-3">
+      <input type="number" class="form-control" min="0" max="100" formControlName="number" />
+    </div>
+    <div class="col-sm-3">
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary">
+          Set ID
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<hr/>
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <app-post></app-post>
+  </div>
+  <div class="col-12 col-lg-4">
+    <app-comment></app-comment>
+  </div>
+  <div class="col-12 col-lg-4">
+    <app-album></app-album>
+  </div>
+</div>
